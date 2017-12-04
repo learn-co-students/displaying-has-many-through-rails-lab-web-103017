@@ -1,0 +1,9 @@
+<h1>edit a musician </h1>
+
+<%= form_for(@member) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :band %>
+<%= f.collection_select :band_id, Band.all, :id, :name %>
+<%= f.submit %>
+<%end%>

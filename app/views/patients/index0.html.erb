@@ -1,0 +1,7 @@
+<h1>All the musicians:</h1>
+
+<ul>
+<%@members.each do |member| %>
+<li><%=member.name%> is a member of <%=link_to member.band.name, band_path(member.band) %></li>
+<%end%>
+</ul>
